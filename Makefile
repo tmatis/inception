@@ -6,7 +6,7 @@
 #    By: tmatis <tmatis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 16:51:58 by tmatis            #+#    #+#              #
-#    Updated: 2021/08/30 16:58:08 by tmatis           ###   ########.fr        #
+#    Updated: 2021/08/30 17:00:17 by tmatis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,6 @@ re:	clean all
 
 setup:
 	sudo chmod 777 /var/run/docker.sock
-	sudo bash -c "echo "127.0.0.1	tmatis.42.fr" >> /etc/hosts"
+	echo "echo "127.0.0.1	tmatis.42.fr" | sudo tee -a /etc/hosts
 
 .PHONY:	all clean fclean re setup
