@@ -20,6 +20,7 @@ fclean:	clean
 re:	clean all
 
 setup:
+	sudo chmod 777 /var/run/docker.sock
 	sudo echo "127.0.0.1	tmatis.42.fr" >> /etc/hosts
 
 .PHONY:	all clean fclean re setup
